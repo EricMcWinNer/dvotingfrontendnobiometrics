@@ -1,0 +1,77 @@
+@import assets/sass/reusable
+@import assets/sass/fonts
+
+$background: 'assets/img/dashboard/asorock.png'
+
+.countDown
+  background-color: white
+  padding: 40px
+  border-radius: 14px
+  color: $themeColor
+  position: relative
+  z-index: 10
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.14)
+  background:
+    image: url('~#{$background}')
+    size: cover
+    position: center
+  @extend .poppins
+
+  &::after
+    content: ""
+    position: absolute
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    z-index: -1
+    background-color: rgba(255, 255, 255, .3)
+
+  .overlay
+    position: relative
+    z-index: 10
+
+  .countdown-title
+    font-size: 15px
+    font-weight: bold
+    letter-spacing: 1px
+
+  .count
+    font-size: 30px
+    font-weight: 700
+    letter-spacing: 4px
+    @extend .montserrat
+
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+
+    li
+      display: inline-block
+      width: 25%
+      text-align: center
+
+      p
+        font-size: 13px
+
+  .voter-call-to-action
+    display: flex
+    justify-content: center
+    @extend .fullWidth
+
+    a
+      font-weight: bold
+      margin:
+        top: 20px
+        bottom: 20px
+      background-color: rgba(33, 152, 113, 0.75)
+      transition-property: background-color
+      transition-duration: .9s
+
+      &:hover
+        background-color: rgba(33, 152, 113, 1)
+
+    img
+      width: 25px
+      margin-right: 10px

@@ -1,0 +1,117 @@
+@import assets/sass/reusable
+@import assets/sass/fonts
+
+.baseCard
+  width: 100%
+  padding: 25px
+  border-radius: 9px
+  background:
+    color: white
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.14)
+
+  .title
+    font:
+      size: 21px
+
+  .subtitle
+    font:
+      size: 14px
+    color: #555
+    line-height: 190%
+
+  label
+    display: block
+
+  input.basecard-input
+    display: inline-block
+    border: 1px solid #ddd
+      radius: 4px
+    padding: 14px
+      left: 15px
+    width: 350px
+    @extend .cartogothic
+
+    &[disabled]
+      cursor: not-allowed
+
+  select.basecard-select
+    font-size: 14px
+    width: 350px
+    padding: 14px
+      left: 15px
+    border: 1px solid #ddd
+    height: 50px
+    display: inline-block !important
+    @extend .cartogothic
+
+
+  .react-datetime-picker__wrapper
+    border: 1px solid #ddd
+      radius: 4px
+    padding: 14px
+      left: 15px
+    width: 350px
+
+
+  .inputGroup
+    margin:
+      bottom: 16px
+
+  .submitForm
+    background-color: $themeColor
+    color: white
+    padding: 14px 28px
+    @extend .cartogothic
+    border: none
+      radius: 4px
+
+  .iconContainer
+    margin:
+      right: 25px
+
+  .nullCardTitle
+    @extend .poppins
+    font:
+      weight: 500
+
+  div.title
+    img
+      margin:
+        right: 15px
+
+      &.small
+        width: 37px
+
+      &.smaller
+        width: 30px
+        margin:
+          right: 10px
+
+  p.title
+    font:
+      size: 21px
+    @extend .cartogothic
+
+  .subtitle
+    font:
+      size: 14px
+    color: #555
+    @extend .poppins
+
+  .detail
+    margin:
+      bottom: 25px
+
+    p
+      font:
+        size: 14px
+
+    p.detailTitle
+      font:
+        size: 15px
+      color: $themeColor
+      margin:
+        right: 10px
+        bottom: 5px
+      @extend .mb0
+      @extend .cartogothic

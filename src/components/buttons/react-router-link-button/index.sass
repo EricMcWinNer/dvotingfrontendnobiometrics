@@ -1,0 +1,36 @@
+@import assets/sass/reusable
+@import assets/sass/fonts
+
+.react-router-link-button
+  padding: 15px 30px
+  @extend .poppins
+  border: none
+    radius: 4px
+  display: inline-flex
+  color: white
+  background-color: black
+  align-items: center
+
+  &.center
+    justify-content: center
+
+  &.only-icon
+    i
+      margin: 0
+
+  &.small
+    font-size: 10px
+    padding: 5px 10px
+    &.center
+      padding: 5px 7.5px
+
+  &.medium, &.small.medium
+    padding: 8px 12px
+    font-size: 12px
+
+  i
+    margin-right: 10px
+
+  &:hover
+    text-decoration: none
+    color: white

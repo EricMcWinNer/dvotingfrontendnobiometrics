@@ -1,0 +1,50 @@
+@import ../../../assets/sass/reusable
+@import ../../../assets/sass/fonts
+
+$background: 'assets/img/dashboard/single-voter-background.jpg'
+
+#voter
+  .content-container
+    padding:
+      left: 20px
+      right: 20px
+
+    .detail
+      @extend .cartogothic
+      margin-bottom: 10px
+
+      .detailTitle
+        font:
+          size: 15px
+        color: #444
+        margin:
+          bottom: 8px
+
+        i
+          margin:
+            right: 6px
+
+      p
+        font:
+          size: 15px
+
+      &:first-of-type
+        margin:
+          top: 10px
+
+      p:not(.detailTitle)
+        margin-bottom: 0
+
+
+  .profile-picture
+    border-radius: 7px
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3)
+
+  .voterName
+    font:
+      size: 35px
+      weight: 800
+    @extend .montserrat
+    margin:
+      top: 20px
+    word-spacing: 2px

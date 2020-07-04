@@ -1,0 +1,59 @@
+@import assets/sass/reusable
+@import assets/sass/fonts
+@import assets/sass/logowithtext
+
+#navbar
+  width: 100%
+  background-color: white
+  box-shadow: -4px 0 4px 3px rgba(0, 0, 0, 0.45)
+  height: 78px
+  padding: 0 40px
+  margin: 0
+  clear: both
+  position: relative
+  display: flex
+  align-items: center
+
+  #brand
+    a
+      color: #333
+
+  .nav-item
+    margin: 0 15px
+
+    a
+      transition:
+        property: color
+        duration: 1s
+
+      &:hover
+        text-decoration: none
+
+        i, p
+          color: $themeColor
+
+    p
+      font-size: 14px
+      margin:
+        top: 5px
+      @extend .openSans
+
+  .navbarIcons
+    font:
+      size: 19px
+    color: #333
+
+  img
+    width: 30px
+
+  .navbar-vote
+    font-weight: bold
+    padding:
+      left: 20px
+      right: 20px
+    img
+      width: 24px
+      margin-right: 10px
+
+
+

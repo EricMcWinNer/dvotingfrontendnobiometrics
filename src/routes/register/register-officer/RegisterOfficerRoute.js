@@ -1,0 +1,47 @@
+import React, { Component } from "react";
+import RegisterOfficerRouteView from "./RegisterOfficerRouteView";
+import axios from "axios";
+import { initialAjaxAlertState, fireAjaxErrorAlert } from "utils/error";
+import FullScreenLoader from "components/loaders/fullscreen";
+import ErrorAlert from "components/error-alert";
+
+class RegisterOfficerRoute extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { ...initialAjaxAlertState, componentIsLoading: true };
+  }
+
+  componentDidMount() {
+    this._mounted = true;
+    axios.defaults.withCredentials = true;
+    axios
+      .get(
+        `${process.env.REACT_APP_API_PATH}/api/web/auth/validate-web-app-session`
+      )
+      .then(res => {
+        if (res.data.isSessionValid === true)
+          this.props.history.push("/dashboard");
+        else this.setState({ componentIsLoading: false });
+      })
+      .catch(res => fireAjaxErrorAlert(this, res.request.status, null));
+  }
+
+  signInRedirect = () => {
+    this.props.history.push("/login");
+  };
+
+  render() {
+    return (
+      <>
+        {this.state.componentIsLoading ? (
+          <FullScreenLoader />
+        ) : (
+          <RegisterOfficerRouteView signInRedirect={this.signInRedirect} />
+        )}
+        <ErrorAlert state={this.state} />
+      </>
+    );
+  }
+}
+
+export default RegisterOfficerRoute;
